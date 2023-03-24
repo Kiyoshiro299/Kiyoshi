@@ -1,0 +1,75 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+}
+.container{
+    width: 85%;
+    margin: auto;
+    position: absolute;
+    top: 15%;
+    left: 0;
+    overflow:auto;
+    padding: 70px 7.5%;
+}
+.gallery{
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
+    grid-gap: 10px;
+    margin-left: 10px;
+}
+.gallery img{
+    width:100%;
+}
+.banner{
+    width: 100%;
+    height: 150vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(science1-fb_011117032255.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.coconut{
+    width: 90%;
+    margin:auto;
+    padding: 75px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    position: absolute;
+}
+.logo{
+    margin-left: 100px;
+    width:250px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+.coconut ul li{
+    list-style:none;
+    display: inline-block;
+    margin: 0 20px; 
+    position: relative;
+}
+.coconut ul li a{
+    text-decoration: none;
+    color:white;
+    text-transform: uppercase;
+ }
+ .coconut ul li::after{
+    content:"";
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position:absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+ }
+ .coconut ul li:hover::after{
+    width:100%;
+ }
+ @media (max-width:800px){
+    .container{
+        flex-direction: column;
+    }
+ }
